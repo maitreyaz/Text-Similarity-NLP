@@ -72,7 +72,8 @@ df = pd.read_csv("Precily_Text_Similarity.csv")
 
 from sklearn.model_selection import train_test_split
 traindf, testdf = train_test_split(df, test_size=0.2, random_state=42)
-
+#
+spacy.cli.download("en_core_web_lg")
 nlp = spacy.load("en_core_web_lg")
 
 # Loading the model
